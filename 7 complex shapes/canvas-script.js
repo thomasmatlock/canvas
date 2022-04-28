@@ -3,47 +3,60 @@ window.onload = function() {
     let canvas = document.getElementById('hello-world-canvas');
     let context = canvas.getContext('2d');
 
-    context.lineWidth = 5; // set line width
+    /*
+  lineCap = butt|round|square
+  lineJoin = bevel|round|miter
+  shadowColor = color of shadow
+  shadowBlur = 	blur amount of shadows
+  shadowOffsetX	= horizontal distance of the shadow from the shape
+  shadowOffsetY	= vertical distance of the shadow from the shape
+  */
+
+    // 1st Z object
+    context.beginPath();
     context.strokeStyle = 'red';
+    context.lineCap = 'butt';
+    context.lineJoin = 'bevel';
     context.shadowColor = 'black';
-    context.shadowOffsetX = 3;
-    context.shadowOffsetY = 3;
-    context.shadowBlur = 5;
-    context.beginPath(); // reset context state
-    context.moveTo(20, 20); // move to the XY coords, starting point of the line
-    context.lineTo(200, 20); // move to the XY coords, starting point of the line
+    context.shadowOffsetX = 10;
+    context.shadowOffsetY = 10;
+    context.shadowBlur = 10;
+    context.lineWidth = 15;
+    context.moveTo(60, 80);
+    context.lineTo(160, 80);
+    context.lineTo(80, 180);
+    context.lineTo(180, 180);
     context.stroke();
 
-    context.beginPath(); // reset context state
-    context.lineWidth = 5; // set line width
+    // 2nd Z object
+    context.beginPath();
+    context.lineCap = 'round';
+    context.lineJoin = 'round';
     context.strokeStyle = 'blue';
+    context.lineWidth = 15;
     context.shadowColor = 'black';
-    context.shadowOffsetX = -3;
-    context.shadowOffsetY = 3;
-    context.shadowBlur = 5;
-    context.moveTo(30, 30); // move to the XY coords, starting point of the line
-    context.lineTo(200, 30); // move to the XY coords, starting point of the line
+    context.shadowOffsetX = 10;
+    context.shadowOffsetY = 10;
+    context.shadowBlur = 10;
+    context.moveTo(340, 80);
+    context.lineTo(240, 80);
+    context.lineTo(340, 180);
+    context.lineTo(240, 180);
     context.stroke();
 
-    context.beginPath(); // reset context state
-    context.lineWidth = 5; // set line width
-    context.strokeStyle = 'green';
-    context.shadowColor = 'black';
-    context.shadowOffsetX = 3;
-    context.shadowOffsetY = -3;
-    context.shadowBlur = 5;
-    context.moveTo(40, 40); // move to the XY coords, starting point of the line
-    context.lineTo(200, 40); // move to the XY coords, starting point of the line
-    context.stroke();
-
-    context.beginPath(); // reset context state
-    context.lineWidth = 5; // set line width
+    // 3rd Z object
+    context.beginPath();
+    context.lineCap = 'square';
+    context.lineJoin = 'miter';
     context.strokeStyle = 'yellow';
     context.shadowColor = 'black';
-    context.shadowOffsetX = -3;
-    context.shadowOffsetY = -3;
-    context.shadowBlur = 5;
-    context.moveTo(50, 50); // move to the XY coords, starting point of the line
-    context.lineTo(200, 50); // move to the XY coords, starting point of the line
+    context.shadowOffsetX = 10;
+    context.shadowOffsetY = 10;
+    context.shadowBlur = 10;
+    context.lineWidth = 15;
+    context.moveTo(420, 80);
+    context.lineTo(520, 80);
+    context.lineTo(440, 180);
+    context.lineTo(540, 180);
     context.stroke();
 };
