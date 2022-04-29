@@ -23,6 +23,7 @@ window.onload = function() {
     // drawBezierCurve(430, 130, 400, 10, 190, 10, 190, 180);
     // // left bottom curve
     // drawQuadraticCurve(190, 180, 190, 380, 430, 520);
+    // FINISHED
 
     function drawQuadraticCurve(
         startX,
